@@ -1,0 +1,9 @@
+Flask==2.0.1
+flask-session==0.3.1
+flask-cors==3.0.8
+Flask-RESTful==0.3.8
+python-dotenv==0.19.0
+google-cloud-firestore==2.3.4
+PyMySQL==1.0.2
+stripe==2.61.0
+sendgrid==6.8.2

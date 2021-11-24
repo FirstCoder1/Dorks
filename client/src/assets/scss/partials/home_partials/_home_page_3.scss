@@ -1,0 +1,109 @@
+.homepage-3 {
+    padding-top: 88px;
+    background: $background-primary-md;
+
+    .pay-less-title {
+        text-align: center;
+        padding: 0 24px;
+
+        .content-title {
+            @include content-title;
+            font-size: 32px;
+            line-height: 32px;
+            min-width: 229px;
+            max-width: 635px;
+            padding: 0 24px;
+            margin: 0 auto;
+
+            span {
+                color: $primary-green;
+                display: block;
+
+                @media (min-width: 576px) {
+                    display: inline;
+                }
+            }
+
+            @media (min-width: 768px) {
+                padding: 0;
+                font-size: 40px;
+                line-height: 40px;
+            }
+
+            @media (min-width: 1140px) {
+                font-size: 54px;
+                line-height: 54px;
+            }
+        }
+
+        .content-text {
+            @include content-text;
+            font-size: 18px;
+            line-height: 27px;
+            max-width: 623px;
+            min-width: 278px;
+            margin: 38px auto 0;
+        }
+
+        .purchase-button {
+            @include purchase-button;
+            margin-top: 38px;
+        }
+    }
+
+    .dorks-container {
+        position: relative;
+        margin-top: 50px;
+        height: 196px;
+
+        .dorks {
+            &:first-child {
+                display: inline-block;
+                position: absolute;
+                bottom: 0;
+                left: 24px;
+            }
+
+            &:last-child {
+                position: absolute;
+                right: 24px;
+                bottom: 0;
+            }
+
+            @media (min-width: 414px) {
+                &:first-child {
+                    left: 24px !important;
+                }
+                &:last-child {
+                    right: 24px !important;
+                }
+            }
+
+            @media (min-width: 500px) {
+                &:first-child {
+                    left: 10% !important;
+                }
+
+                &:last-child {
+                    right: 10% !important;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        .dorks-container {
+            margin-top: 0;
+            height: 235px;
+            .dorks {
+                &:first-child {
+
+                }
+
+                &:last-child {
+
+                }
+            }
+        }
+    }
+}

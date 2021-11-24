@@ -1,0 +1,39 @@
+footer {
+    @include dflex-center;
+    text-align: center;
+    width: 100%;
+    background: $primary-green;
+    color: white;
+    height: $footer-mobile-height;
+    font-family: $font-public-sans;
+    font-size: 18px;
+    line-height: 27px;
+
+    .container-fluid {
+        margin-left: 0;
+        margin-right: 0;
+
+        span {
+            a {
+                color: inherit;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        height: $footer-height;
+        .container-fluid {
+            padding: 0 80px;
+        }
+
+        [class*="col"] {
+            &:first-child {
+                text-align: left;
+            }
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+}

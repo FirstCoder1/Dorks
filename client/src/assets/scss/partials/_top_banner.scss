@@ -1,0 +1,47 @@
+.top-banner {
+    @include dflex-center;
+    background: $primary-green;
+    width: 100%;
+    color: white;
+    padding: 0 24px;
+    height: 104px;
+
+    span {
+        width: 100%;
+        text-align: center;
+        font-family: $font-public-sans;
+    }
+
+    u {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    @media (min-width: 320px) {
+        span {
+            font-size: 16px;
+        }
+    }
+
+    @media (min-width: 414px) {
+        span {
+            font-size: 18px;
+        }
+    }
+
+    @media (min-width: 616px) {
+        height: $top-banner-height;
+    }
+
+    //@media (max-width: 770px) {
+    //    height: auto;
+    //    span {
+    //
+    //
+    //        //u {
+    //        //    display: block !important;
+    //        //}
+    //    }
+    //}
+}

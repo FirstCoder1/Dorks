@@ -1,0 +1,166 @@
+.purchase {
+    background: $background-primary-md;
+
+    .purchase-title-container {
+        padding-top: 68px;
+        text-align: center;
+
+        @media (min-width: 616px) {
+            padding-top: 40px;
+        }
+
+        .content-title {
+            @include content-title;
+            font-size: 36px;
+            line-height: 36px;
+
+            @media (min-width: 768px) {
+                font-size: 54px;
+                line-height: 54px;
+            }
+        }
+
+        .content-text {
+            @include content-text;
+            font-size: 18px;
+            line-height: 145%;
+            margin: 24px auto 0;
+            max-width: 400px;
+            padding: 0 24px;
+
+            @media (min-width: 500px) {
+                padding: 0;
+            }
+        }
+
+        .no-charge-text {
+            text-decoration: underline;
+            margin-top: 24px;
+            font-size: 18px;
+            padding: 0 24px;
+        }
+    }
+
+    .button-container {
+        margin: 48px auto 0;
+        width: 400px;
+        position: relative;
+
+        button {
+            width: 192px;
+            height: 50px;
+            box-shadow: $btn-box-shadow;
+            border: 1px solid #959BA6;
+            border-radius: 8px;
+            color: #959BA6;
+            font-family: $font-public-sans;
+            background: white;
+
+            &.active {
+                @include purchase-btn-active;
+            }
+
+            &:last-child {
+                position: absolute;
+                right: 0;
+            }
+
+            &:hover {
+                @include purchase-btn-active;
+            }
+        }
+
+        @media (max-width: 576px) {
+            width: 100%;
+            button {
+                display: block;
+                margin: 0 auto;
+                width: 80%;
+                
+                &:last-child {
+                    position: unset;
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+
+    .purchase-form-container {
+        margin-top: 40px;
+        font-family: $font-public-sans;
+
+        .form-container {
+            width: 80%;
+            margin: 0 auto;
+
+            div {
+                &.input-element {
+                    label {
+                        display: block;
+                        font-size: 18px;
+
+                        &:nth-child(n+1) {
+                            margin-top: 24px;
+                        }
+                    }
+
+                    input, textarea {
+                        border: 1px solid #0B0B0B;
+                        box-shadow: $btn-box-shadow;
+                        border-radius: 8px;
+                        padding: 0px 16px;
+                        height: 50px;
+                        margin-top: 8px;
+                        width: 100%;
+                        font-size: 18px;
+                    }
+
+                    textarea {
+                        height: 105px;
+                        padding-top: 11px;
+                    }
+                }
+
+                &.tos {
+                    @include dflex-center;
+                    margin-top: 24px;
+
+                    label {
+                        font-size: 12px;
+                        margin-left: 12px;
+                    }
+                }
+
+                .purchase-button {
+                    @include purchase-button;
+                    margin-top: 40px;
+                    width: 100%;
+                    font-size: 18px;
+                }
+
+                span {
+                    color: $primary-green;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                &.stripe-redirect-text {
+                    margin-top: 16px;
+                    text-align: center;
+                    font-size: 12px;
+                }
+            }
+
+
+            @media (min-width: 576px) {
+                width: 400px;
+            }
+        }
+    }
+
+    .dorks-container {
+        @include dorks-container;
+    }
+}

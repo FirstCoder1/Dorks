@@ -1,0 +1,74 @@
+.homepage-1 {
+    background: $background-primary-xs;
+    padding-top: 68px;
+
+    @media (min-width: 616px) {
+        padding-top: 40px;
+    }
+
+    .home-container-1 {
+        margin-left: 12px;
+        width: calc(100% - 24px);
+        text-align: center;
+
+        .content-title {
+            @include content-title;
+            font-size: 36px;
+            line-height: 36px;
+            width: 100%;
+            margin: 0 auto;
+
+            div {
+                span {
+                    color: $primary-green;
+                }
+            }
+
+            @media (min-width: 414px) {
+                font-size: 40px;
+                line-height: 40px;
+            }
+
+            @media (min-width: 716px) {
+                font-size: 60px;
+                line-height: 60px;
+            }
+
+            @media (min-width: 1025px) {
+                font-size: 80px;
+                line-height: 80px;
+            }
+        }
+
+        @media (min-width: 414px) {
+            margin-left: 24px;
+            width: calc(100% - 48px);
+        }
+
+        @media (min-width: 600px) {
+            width: calc(100% - 80px);
+            margin-left: 40px;
+        }
+
+        .content-text {
+            @include content-text;
+            line-height: 27px;
+            max-width: 623px;
+            min-width: 280px;
+            margin: 40px auto 0;
+
+            span {
+                color: $primary-green;
+            }
+        }
+
+        .purchase-button {
+            @include purchase-button;
+            margin-top: 40px;
+        }
+    }
+
+    .dorks-container {
+        @include dorks-container;
+    }
+}

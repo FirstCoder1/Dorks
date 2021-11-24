@@ -1,0 +1,71 @@
+.stripe-checkout {
+    .main-container {
+        width: 80%;
+        margin: 0 auto;
+        .form-header {
+            margin-top: 88px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 16px;
+            @include content-title;
+            color: rgba(26,26,26,.6)
+        }
+
+        .form-price {
+            text-align: center;
+            font-size: 28px;
+            color: black;
+            font-family: $font-public-sans;
+
+            span {
+                &:last-child {
+                    font-size: 14px;
+                    color: rgba(26,26,26,.6);
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        @media (min-width: 568px) {
+            width: 400px;
+        }
+
+        .stripe-form {
+            margin-top: 44px;
+
+            label {
+                margin-bottom: 8px;
+            }
+            .form-control {
+                margin-bottom: 8px;
+            }
+
+            #stripe-element-form {
+                button {
+                    display: none;
+                }
+            }
+
+            .purchase-button {
+                @include purchase-button;
+                width: 100%;
+                margin-top: 16px;
+            }
+
+            //.stripe-card {
+            //    margin-top: 8px;
+            //}
+
+            .checkout-error {
+                color: red;
+                margin: 8px;
+                @include content-text;
+            }
+
+            #aio-card {
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                padding: 12px;
+            }
+        }
+    }
+}
